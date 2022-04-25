@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import css from "./index.module.scss";
+import PropTypes from 'prop-types';
 import Button from "../UI/Button";
 import {getHash, setHash} from "../../helpers/hash.helper";
 import {IconArrowBack} from "../UI/Icons";
-import Success from "../Success"
+import Success from "../Success";
+import css from "./index.module.scss";
+import {CSSTransition} from "react-transition-group";
 
 function PaymentMethod({iconUrl, name, title, category, isActive}) {
   const [openMethod, setOpenMethod] = useState(null);
@@ -24,6 +26,12 @@ function PaymentMethod({iconUrl, name, title, category, isActive}) {
     setOpenMethod(isActive ? name : null);
   }, [isActive, name])
 
+  const animationClasses = {
+    enterDone: css.enterDone,
+    exitActive: css.exitActive,
+    exitDone: css.exitDone
+  }
+
   return(
     <>
       <div className={css.item} onClick={open}>
@@ -32,7 +40,12 @@ function PaymentMethod({iconUrl, name, title, category, isActive}) {
         </div>
         <div className={css.title}>{title.en}</div>
       </div>
-      {openMethod === name && (
+      <CSSTransition
+        in={openMethod === name}
+        timeout={300}
+        classNames={animationClasses}
+        unmountOnExit
+      >
         <div className={css.form}>
           <div className={css.header}>
             <button className={css.buttonBack} onClick={close}>
@@ -47,7 +60,7 @@ function PaymentMethod({iconUrl, name, title, category, isActive}) {
             </Button>
           </div>
         </div>
-      )}
+      </CSSTransition>
       {
         <Success
           openPopup={openPopup}
@@ -56,6 +69,14 @@ function PaymentMethod({iconUrl, name, title, category, isActive}) {
       }
     </>
   )
+}
+
+PaymentMethod.propTypes = {
+  iconUrl: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.object,
+  category: PropTypes.string,
+  isActive: PropTypes.bool
 }
 
 export default PaymentMethod;

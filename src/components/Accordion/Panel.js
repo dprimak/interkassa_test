@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import css from "./index.module.scss";
 import arrayToString from "../../helpers/arrayToString.helper";
 import {IconChevron} from "../UI/Icons";
@@ -54,6 +55,13 @@ function Panel({activateTab = () => {}, activeTab, index, data}) {
       </div>
     </div>
   )
+}
+
+Panel.propTypes = {
+  activateTab: PropTypes.func,
+  activeTab: PropTypes.string,
+  index: PropTypes.string,
+  data: PropTypes.object,
 }
 
 export default Panel;

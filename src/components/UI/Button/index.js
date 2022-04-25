@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import css from "./index.module.scss";
 
 function Button({children, onClick = () => {}}) {
@@ -10,6 +11,11 @@ function Button({children, onClick = () => {}}) {
       {children}
     </button>
   )
+}
+
+Button.propTypes = {
+  children: PropTypes.any,
+  onClick: PropTypes.func
 }
 
 export default Button;
