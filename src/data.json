@@ -1,0 +1,107 @@
+{
+  "paymentMethods": [
+    {
+      "category": "card",
+      "title": {
+        "en": "Bank cards"
+      },
+      "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/card.svg",
+      "items": [
+        {
+          "name": "card",
+          "title": {
+            "en": "Visa MasterCard"
+          },
+          "currency": [
+            "UAH"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/card-transfer.svg"
+        },
+        {
+          "name": "visa",
+          "title": {
+            "en": "Visa"
+          },
+          "currency": [
+            "UAH"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/visa.svg"
+        },
+        {
+          "name": "mastercard",
+          "title": {
+            "en": "Mastercard"
+          },
+          "currency": [
+            "UAH"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/mastercard.svg"
+        }
+      ]
+    },
+    {
+      "category": "wallet",
+      "title": {
+        "en": "E-wallets"
+      },
+      "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/wallet.svg",
+      "items": [
+        {
+          "name": "nixmoney",
+          "title": {
+            "en": "Nixmoney"
+          },
+          "currency": [
+            "USD"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/nixmoney.svg"
+        }
+      ]
+    },
+    {
+      "category": "crypto",
+      "title": {
+        "en": "Crypto"
+      },
+      "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/crypto.svg",
+      "items": [
+        {
+          "name": "ethereum",
+          "title": {
+            "en": "Ethereum"
+          },
+          "currency": [
+            "USD",
+            "EUR",
+            "UAH"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/ethereum.svg"
+        },
+        {
+          "name": "tether",
+          "title": {
+            "en": "Tether"
+          },
+          "currency": [
+            "USD",
+            "EUR",
+            "UAH"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/tether.svg"
+        },
+        {
+          "name": "usdttrc",
+          "title": {
+            "en": "Usdttrc"
+          },
+          "currency": [
+            "USD",
+            "EUR",
+            "UAH"
+          ],
+          "iconUrl": "https:\/\/storage.googleapis.com\/cdn-checkout\/usdt-trc.svg"
+        }
+      ]
+    }
+  ]
+}

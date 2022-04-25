@@ -1,0 +1,25 @@
+.button {
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+  min-width: 11.25rem;
+  padding: 0.5rem 2rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: .3s all;
+
+  &:hover {
+    background: lighten(#000, 25%);
+  }
+}
